@@ -5,6 +5,8 @@ import {Skills} from './layout/sections/skills/Skills.tsx';
 import {Works} from './layout/sections/works/Works.tsx';
 import {Testimony} from './layout/sections/testimony/Testimony.tsx';
 import {Contact} from './layout/sections/contacts/Contact.tsx';
+import {Slogan} from './layout/sections/slogan/Slogan.tsx';
+import {Footer} from './layout/footer/Footer.tsx';
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
             <Works/>
             <Testimony/>
             <Contact/>
+            <Slogan/>
+            <Footer/>
         </div>
     )
 }
