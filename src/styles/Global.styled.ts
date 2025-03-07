@@ -45,4 +45,20 @@ export const GlobalStyle = createGlobalStyle`
     section:nth-last-of-type(even) {
         background-color: ${theme.colors.secondaryBg};
     }
+
+    h3 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    a {
+        color: ${theme.colors.font};
+    }
 `

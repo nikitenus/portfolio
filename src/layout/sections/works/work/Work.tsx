@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "../../../../components/Link.tsx";
 
 type WorkPropsType = {
     title: string
@@ -35,8 +36,5 @@ const Title = styled.h3`
 `
 
 const Text = styled.p`
-
-`
-const Link = styled.a`
 
 `
