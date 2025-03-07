@@ -8,12 +8,13 @@ type SkillPropsType = {
     description: string
 }
 
-export const Skill = (props: SkillPropsType) => {
+export const  Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
             <FlexWrapper direction={'column'} align={'center'}>
                 <IconWrapper>
-                    <Icon iconId={props.iconId}/>
+                    <Icon iconId={props.iconId}
+                    viewBox={"0 0 50 50"}/>
                 </IconWrapper>
                 <SkillTitle>{props.title}</SkillTitle>
                 <SkillText>{props.description}</SkillText></FlexWrapper>
@@ -35,8 +36,8 @@ const IconWrapper = styled.div`
         height: 80px;
         width: 80px;
         background: rgba(255, 255, 255, 0.10);
-        transform: rotate(45deg) translateX(-50%) translateY(-50%);
-        
+        transform: rotate(45deg) translate(-50%, -50%);
+
         position: absolute;
         left: 50%;
         top: 50%;

@@ -9,14 +9,14 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper align={'center'} justify={'space-between'}>
-                    <div>
+                    <TextWrapper>
                         <SmallText>Hi There</SmallText>
                         <Name>
-                            I am
-                            <span>Vladislav Nikitenkov</span>
+                             I am
+                            <span> Vladislav Nikitenkov</span>
                         </Name>
                         <MainTitle>A Web Developer.</MainTitle>
-                    </div>
+                    </TextWrapper>
                     <PhotoWrapper>
                         <Photo src={photo} alt=""/>
                     </PhotoWrapper>
@@ -52,6 +52,10 @@ const PhotoWrapper = styled.div`
         left: 24px;
         z-index: -1;
     }
+`
+
+const TextWrapper = styled.div`
+    text-align: start;
 `
 
 const MainTitle = styled.h1`
