@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+        cursor: pointer;
+        color: ${theme.colors.font};
     }
 
     section {
@@ -39,11 +41,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section:nth-last-of-type(odd) {
-        background-color: ${theme.colors.primaryBg};
+        background-color: ${theme.colors.secondaryBg};
     }
 
     section:nth-last-of-type(even) {
-        background-color: ${theme.colors.secondaryBg};
+        background-color: ${theme.colors.primaryBg};
     }
 
     h3 {
@@ -56,8 +58,9 @@ export const GlobalStyle = createGlobalStyle`
     p {
         font-size: 14px;
         font-weight: 400;
+        line-height: 1.4;
     }
-    
+
     a {
         color: ${theme.colors.font};
     }

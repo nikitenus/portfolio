@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link} from "../../../../components/Link.tsx";
+import {Link} from '../../../../components/Link.tsx';
 
 type MenuPropsType = {
     menuItems: Array<string>
@@ -28,8 +28,7 @@ const StyledTabMenu = styled.nav`
 `
 
 const ListItem = styled.li`
-    position: relative;
-    z-index: 0;
+    
 `
 
 
