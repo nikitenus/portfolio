@@ -8,7 +8,7 @@ type MenuPropsType = {
 export const MobileHeaderMenu = (props: MenuPropsType) => {
     return (
         <StyledHeaderMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span>
 
                 </span>
@@ -68,7 +68,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             background-color: ${theme.colors.font};
             position: absolute;
             transform: translateY(10px);
-            
+
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(-45deg) translateY(0);
                 width: 36px;
@@ -86,7 +86,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);
-                
             `}
         }
 
@@ -106,6 +105,11 @@ const MobileHeaderMenuPopup = styled.div<{ isOpen: boolean }>`
     right: 0;
     z-index: 999999;
 
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `}
     ul {
         display: flex;
         gap: 30px;
@@ -113,12 +117,6 @@ const MobileHeaderMenuPopup = styled.div<{ isOpen: boolean }>`
         flex-direction: column;
         align-items: center;
     }
-
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `}
 `
 
 const Link = styled.a`
