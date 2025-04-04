@@ -1,6 +1,7 @@
 import {Icon} from '../../../../components/icon/Icon.tsx';
 import styled from 'styled-components';
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 
 type SkillPropsType = {
     iconId: string
@@ -24,7 +25,12 @@ export const  Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     width: 380px;
+    flex-grow: 1;
     padding: 62px 20px 40px;
+    
+    @media ${theme.media.mobile} {
+        padding: 62px 0 40px;
+    }
 `
 
 export const IconWrapper = styled.div`
