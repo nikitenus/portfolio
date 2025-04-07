@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import {Link} from '../../../../components/Link.tsx';
+import {Link} from '../../../../components/Link.ts';
+import {S} from '../Works_Styles.ts';
 
 type MenuPropsType = {
     menuItems: Array<string>
@@ -7,28 +7,16 @@ type MenuPropsType = {
 
 export const TabMenu = (props: MenuPropsType) => {
     return (
-        <StyledTabMenu>
+        <S.TabMenu>
             <ul>
-                {props.menuItems.map((el, index) => <ListItem key={index}>
+                {props.menuItems.map((el, index) => <S.ListItem key={index}>
                     <Link href="">{el}</Link>
-                </ListItem>)}
+                </S.ListItem>)}
             </ul>
-        </StyledTabMenu>
+        </S.TabMenu>
     );
 };
 
-const StyledTabMenu = styled.nav`
-    margin-bottom: 40px;
 
-    ul {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-`
-
-const ListItem = styled.li`
-    
-`
 
 

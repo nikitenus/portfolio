@@ -1,4 +1,5 @@
 import iconsSprite from '../../assets/images/icons-sprite.svg'
+import * as React from "react";
 
 type IconProsType = {
     iconId: string
@@ -7,7 +8,7 @@ type IconProsType = {
     viewBox?: string
 }
 
-export const Icon = (props: IconProsType) => {
+export const Icon: React.FC<IconProsType> = (props: IconProsType) => {
     return (
         <svg
             width={props.width || '50'}

@@ -1,21 +1,22 @@
 import styled from 'styled-components';
 import {Icon} from '../../../components/icon/Icon.tsx';
 import {Slider} from '../../../components/slider/Slider.tsx';
-import {SectionTitle} from '../../../components/SectionTitle.tsx';
-import {FlexWrapper} from '../../../components/FlexWrapper.tsx';
-import {IconWrapper} from "../skills/skill/Skill.tsx";
+import {SectionTitle} from '../../../components/SectionTitle.ts';
+import {FlexWrapper} from '../../../components/FlexWrapper.ts';
 import {Container} from "../../../components/Container.ts";
+import {S} from '../skills/Skills_Styles.ts';
+import * as React from "react";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
         <StyledTestimony>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction={'column'}
                              align={'center'}>
-                    <IconWrapper>
+                    <S.IconWrapper>
                         <Icon iconId={'quote'}/>
-                    </IconWrapper>
+                    </S.IconWrapper>
 
                     <Slider/>
                 </FlexWrapper>
@@ -28,7 +29,7 @@ const StyledTestimony = styled.section`
     min-height: 50vh;
     background-color: #8b58f1;
 
-    ${IconWrapper} {
+    ${S.IconWrapper} {
         margin: 40px 0 70px;
     }
 `
