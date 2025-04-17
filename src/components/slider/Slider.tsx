@@ -40,5 +40,4 @@ export const Slider = () => (
             items={items}
         />
     </S.Slider>
-
 );

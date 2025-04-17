@@ -12,11 +12,16 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-alice-carousel": "^2.9.1",
     "react-dom": "^18.3.1",
-    "styled-components": "^6.1.13"
+    "react-parallax-tilt": "^1.7.291",
+    "styled-components": "^6.1.13",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

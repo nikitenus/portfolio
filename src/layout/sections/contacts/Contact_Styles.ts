@@ -2,6 +2,7 @@ import {theme} from "../../../styles/Theme.ts";
 import styled from "styled-components";
 
 const Contacts = styled.section`
+    position: relative;
     min-height: 50vh;
     background-color: #ef997b;
 `

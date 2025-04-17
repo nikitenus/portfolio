@@ -49,7 +49,11 @@ const TextWrapper = styled.div`
 `
 
 const MainTitle = styled.h1`
-    ${font({weight: 400, Fmin: 20, Fmax: 27})}
+    ${font({weight: 400, Fmin: 20, Fmax: 27})};
+    
+    p {
+        display: none;
+    }
 `
 
 const Name = styled.h2`
