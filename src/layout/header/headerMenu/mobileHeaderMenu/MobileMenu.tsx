@@ -3,7 +3,7 @@ import * as React from "react";
 import {S} from '../HeaderMenu_styles.ts';
 import {useState} from "react";
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+export const MobileMenu: React.FC = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +20,7 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menu
             <S.MobileMenuPopup isOpen={isOpen} onClick={() => {
                 setIsOpen(false)
             }}>
-                <Menu menuItems={props.menuItems}></Menu>
+                <Menu></Menu>
             </S.MobileMenuPopup>
         </S.MobileMenu>
     );
