@@ -8,9 +8,8 @@ import {Container} from '../../../components/Container.ts';
 import * as React from "react";
 import {S} from './Works_Styles.ts';
 import {useState} from "react";
+import {AnimatePresence, motion} from 'framer-motion';
 
-
-// const tabsItems = ['All', 'landing page', 'React', 'spa']
 
 const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
     {
@@ -37,13 +36,15 @@ const worksData = [
         title: 'Social Network',
         src: socialImg,
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        type: "spa"
+        type: "spa",
+        id: 1,
     },
     {
         title: 'Timer',
         src: timer,
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim',
-        type: "react"
+        type: "react",
+        id: 2,
     },
 ]
 
@@ -75,7 +76,29 @@ export const Works: React.FC = () => {
                     filterStatus={filterStatus}
                 />
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
-                    {filteredWorks.map((el, index) => <Work key={index} title={el.title} text={el.text} src={el.src}/>)}
+                    <AnimatePresence>
+                        {filteredWorks.map((el) => {
+                            return (
+                                <motion.div style={{
+                                    width: "330px",
+                                    flexGrow: 1,
+                                    maxWidth: "540px",
+                                }}
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            exit={{opacity: 0}}
+                                            layout
+                                            key={el.id}
+                                >
+                                    <Work
+                                        key={el.id}
+                                        title={el.title}
+                                        text={el.text}
+                                        src={el.src}/>
+                                </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
                 </FlexWrapper>
             </Container>
         </S.Works>
